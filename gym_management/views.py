@@ -1,12 +1,11 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import Trainer
-# Create your views here.
+from django.template import loader
 
-# def trainer_details(generic.ListView):
-#     # model = Trainer
-#     # context_object_name = 'Trainer_list'
-#     # template_name = 'gym_management/Trainer_list.html'
+def home(request):
+    template = loader.get_template("gym_management/Home.html")
+    return template.render()
 
 def list_trainers(request):
     trainers = Trainer.objects.all()  # Get all trainer objects
