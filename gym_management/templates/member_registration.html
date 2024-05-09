@@ -1,28 +1,16 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Member Registration Form</title>
-    
-</head>
-<body>
-    <h1>Member Registration</h1>
-    <form action="{% url 'register_member' %}" method="POST">
-        {% csrf_token %}
-        {{ form.as_div }}
-        <button type="submit" class="btn">Register</button>
-    </form>
-</body>
-</html> -->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet", type="text/css", href="{% static 'reg_member.css' %}">
+    <title>Member Registration</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'gym_management/reg_member.css' %}" />
   </head>
   <body>
-    <h1>Member Registration</h1>
+    <h1 class="header">Member Registration Form</h1>
     <title>Member Registration Form</title>
-    </head>8000
+    </head>
     <body>
 <div class="outer">
     <form action="/register/member/" method="POST">
@@ -33,17 +21,20 @@
       />
       <div>
         <label for="id_name">Name:</label>
-        <textarea name="name" cols="40" rows="10" required="" id="id_name">
-anonymous</textarea
-        >
+        <textarea name="name" cols="40" rows="10" required="" id="id_name"></textarea>
       </div>
       <div>
         <label for="id_trainer">Trainer:</label>
         <select name="trainer" required="" id="id_trainer">
           <option value="" selected="">---------</option>
           <option value="1">
-            Pratik Joshi, male 2004-01-02 53416845494 Strength training, weight
-            training, cardio
+            Aman, (Fitness Instructor & Fitness Freak).
+          </option>
+          <option value="2">
+            Harry, (Passion for heart-pounding workouts & Cardio Expert).
+          </option>
+          <option value="3">
+            I'leana, (Master Trainer, Personalized guidance, expert advice).
           </option>
         </select>
       </div>
@@ -54,16 +45,10 @@ anonymous</textarea
       <div>
         <label for="id_sex">Sex:</label>
         <select name="sex" id="id_sex">
-          <option value="m" selected="">male</option>
-          <option value="f">female</option>
-          <option value="o">other</option>
-        </select>8000er"
-          name="height"
-          value="0.0"
-          step="0.01"
-          required=""
-          id="id_height"
-        />
+          <option value="m" selected="">Male</option>
+          <option value="f">Female</option>
+          <option value="o">Other</option>
+        </select>
       </div>
       <div>
         <label for="id_weight">Weight:</label>
@@ -86,7 +71,7 @@ anonymous</textarea
           required=""
           id="id_address"
         >
-Jane street, New York</textarea
+</textarea
         >
       </div>
 
@@ -94,7 +79,7 @@ Jane street, New York</textarea
         <label for="id_subscription">Subscription:</label>
 
         <select name="subscription" id="id_subscription">
-          <option value="M" selected="">monthly</option>
+          <option value="M" selected="">Monthly</option>
 
           <option value="Q">Quarterly</option>
 
@@ -108,13 +93,15 @@ Jane street, New York</textarea
         <select name="fees" required="" id="id_fees">
           <option value="" selected="">---------</option>
 
-          <option value="P">paid</option>
+          <option value="P">Paid</option>
 
-          <option value="NP">Not_paid</option>
+          <option value="NP">Not paid</option>
         </select>
       </div>
       <button type="submit" class="btn">Register</button>
     </form>
 </div>
-  </body>
+
+  
+</body>
 </html>

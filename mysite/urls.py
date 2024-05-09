@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls, name='admin'),
     path('', include('gym_management.urls')),
     # path('', RedirectView.as_view(url='gym_management/')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

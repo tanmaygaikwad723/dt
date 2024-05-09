@@ -1,11 +1,95 @@
-h1{
-    margin-left: 300px;
-
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('reg_mem.jpg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.outer{
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-left: 300px;
+.outer {
+  background-color: rgba(255, 255, 255, 0.644); 
+  padding: 20px;
+  border-radius: 10px;
+  width: 40%;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.header {
+  text-align: center;
+  color: #eeff00; 
+  
+  
+}
+
+form {
+  margin-top: 20px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  font-size: 0.9em; /* Reduced label font size */
+  font-size: 18px;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff; 
+  cursor: pointer;
+  margin-left: 160px;
+}
+
+.btn:hover {
+  background-color: #0056b3; 
+}
+
+/* Additional styles for select dropdown */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 12L4 6h12l-6 6z"/></svg>'); /* Custom arrow icon */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 25px;
+}
+
+/* Additional styles for required fields */
+input:required:invalid,
+textarea:required:invalid,
+select:required:invalid {
+  border: 1px solid red; /* Adjust the border color for invalid fields */
+}
+
+input:required:valid,
+textarea:required:valid,
+select:required:valid {
+  border: 1px solid #ccc; /* Adjust the border color for valid fields */
 }
