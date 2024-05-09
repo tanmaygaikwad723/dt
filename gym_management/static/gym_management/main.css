@@ -120,7 +120,7 @@ a {
     a:hover strong {
       color: inherit; }
 
-strong, b {
+strong, b{
   color: #3d4449;
   font-weight: 600; }
 
@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 0; }
 
 h1 {
+  
   font-size: 4em;
   margin: 0 0 0.5em 0;
   line-height: 1.3; }
@@ -1355,6 +1356,7 @@ ul.icons {
         font-size: 1.25em; }
 
 /* Contact */
+
 ul.contact {
   list-style: none;
   padding: 0; }
@@ -1394,7 +1396,18 @@ ul.contact {
         top: 0; }
     ul.contact li a {
       color: inherit; }
-
+    .mail{
+      color: black;
+    }
+    .phone{
+      color: black;
+    }
+    .address{
+      color: black;
+    }
+    .span10{
+      color: red;
+    }
 /* Pagination */
 ul.pagination {
   cursor: default;
@@ -1495,8 +1508,11 @@ button,
   background-color: transparent;
   border-radius: 0.375em;
   border: 0;
-  box-shadow: inset 0 0 0 2px #f56a6a;
-  color: #f56a6a !important;
+  box-shadow: inset 0 0 0 1px black ;
+  background-color: yellow;
+  /* color: #f56a6a !important; */
+  color: #000000;
+  
   cursor: pointer;
   display: inline-block;
   font-family: "Roboto Slab", serif;
@@ -1561,13 +1577,17 @@ button,
     input[type="button"].primary:hover,
     button.primary:hover,
     .button.primary:hover {
-      background-color: #f67878; }
+      background-color: #f67878;
+    
+     }
     input[type="submit"].primary:active,
     input[type="reset"].primary:active,
     input[type="button"].primary:active,
     button.primary:active,
     .button.primary:active {
-      background-color: #f45c5c; }
+      background-color: #f45c5c; 
+      
+    }
   input[type="submit"].disabled, input[type="submit"]:disabled,
   input[type="reset"].disabled,
   input[type="reset"]:disabled,
@@ -1582,7 +1602,8 @@ button,
 
 /* Mini Posts */
 .mini-posts article {
-  border-top: solid 1px rgba(210, 215, 217, 0.75);
+  border-top: solid 1px rgba(199, 206, 209, 0.75);
+  
   margin-top: 2em;
   padding-top: 2em; }
   .mini-posts article .image {
@@ -1595,8 +1616,18 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
-
+  .tinfo{
+    color: #000000;
+    font-size: 12px;
+  }
+  .cinfo{
+    color: black;
+    font-size: 12px;
+  }
 /* Features */
+.features article p{
+  color: black;
+}
 .features {
   display: -moz-flex;
   display: -webkit-flex;
@@ -1642,7 +1673,7 @@ button,
       text-align: center;
       width: 10em; }
       .features article .icon:before {
-        color: #f56a6a;
+        color: #ff0000;
         font-size: 2.75rem;
         position: relative;
         top: 0.05em; }
@@ -1652,7 +1683,7 @@ button,
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
         border-radius: 0.25rem;
-        border: solid 2px rgba(210, 215, 217, 0.75);
+        border: solid 2px rgba(0, 0, 0, 0.75);
         content: '';
         display: block;
         height: 7em;
@@ -1723,7 +1754,11 @@ button,
     .features article .icon:before {
       font-size: 1.25rem; } }
 
+
 /* Posts */
+.posts article p{
+  color: black;
+}
 .posts {
   display: -moz-flex;
   display: -webkit-flex;
@@ -1748,7 +1783,7 @@ button,
     position: relative;
     width: calc(33.33333% - 6em); }
     .posts article:before {
-      background: rgba(210, 215, 217, 0.75);
+      background: rgba(175, 207, 250, 0.75);
       content: '';
       display: block;
       height: calc(100% + 6em);
@@ -1757,7 +1792,7 @@ button,
       top: 0;
       width: 1px; }
     .posts article:after {
-      background: rgba(210, 215, 217, 0.75);
+      background: rgba(175, 207, 250, 0.75);
       bottom: -3em;
       content: '';
       display: block;
@@ -2061,6 +2096,7 @@ button,
         z-index: 1; }
       #sidebar .toggle:after {
         background: rgba(222, 225, 226, 0.75);
+    
         border-radius: 0.375em;
         content: '';
         height: 3.5em;
@@ -2068,7 +2104,7 @@ button,
         position: absolute;
         top: 1em;
         width: 5em; } }
-
+    
 /* Header */
 #header {
   display: -moz-flex;
@@ -2086,9 +2122,12 @@ button,
     margin-bottom: 0; }
   #header .logo {
     border-bottom: 0;
-    color: inherit;
-    font-family: "Roboto Slab", serif;
-    font-size: 1.125em; }
+    /* color: inherit; */
+    /* font-size: 1.125em; */
+    font-size: 4.125em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 255, 0);
+   } 
   #header .icons {
     text-align: right; }
   @media screen and (max-width: 1680px) {
@@ -2115,7 +2154,16 @@ button,
   display: -ms-flex;
   display: flex; }
   #banner h1 {
-    margin-top: -0.125em; }
+    margin-top: -0.125em;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    font-size: 40px;
+    padding-left: 20px;
+    background-color: rgba(177, 243, 255, 0.603);
+    color:#000000 }
+  #banner p{
+    color: black;
+  }
   #banner .content {
     -moz-flex-grow: 1;
     -webkit-flex-grow: 1;
@@ -2126,6 +2174,15 @@ button,
     -ms-flex-shrink: 1;
     flex-shrink: 1;
     width: 50%; }
+  #banner .content .yhealth{
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 35px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 251, 0);
+    padding-left: 20px;
+  }
   #banner .image {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
@@ -2156,7 +2213,8 @@ button,
       -ms-flex-direction: column-reverse;
       flex-direction: column-reverse; }
       #banner h1 br {
-        display: none; }
+        display: none;
+        color:#ff0000 }
       #banner .content {
         -moz-flex-grow: 0;
         -webkit-flex-grow: 0;
@@ -2187,7 +2245,7 @@ button,
 
 /* Footer */
 #footer .copyright {
-  color: #9fa3a6;
+  color: #000000;
   font-size: 0.9em; }
   #footer .copyright a {
     color: inherit; }
@@ -2271,3 +2329,257 @@ button,
     border-top: 0;
     margin-top: 0;
     padding-top: 0; }
+
+  #menu .options{
+    color:rgb(0, 0, 0);
+    font-family:sans-serif;
+  }
+  #menu .option{
+    color: red;
+  }
+
+
+
+
+
+    
+
+
+
+
+  .head {
+      font-family: "IBM Plex Sans Condensed", sans-serif;
+      font-weight: 100;
+      font-style: normal;
+      font-weight: bolder;
+      color: #000000;
+      margin-right: 220px;
+      
+    }
+  
+  .titan{
+      height: 20px;
+      margin-top: 2px;
+      font-size: 30px;
+      margin-left: 50px;
+      
+  }
+  
+  .span1{
+      color: red;
+  }
+  
+  .your{
+      font-size: 12px;
+      color: #000000;
+      margin-left: 30px;
+  }
+
+
+
+
+
+
+
+
+
+    .main10{
+      position: relative;
+      width: 100%;
+      /* text-align: center; */
+      
+    }
+    
+    .image10{
+    width:1400px;
+    /* margin-top: 40px; */
+    
+    
+    }
+    
+    .container10 {
+      position: absolute;
+      color: rgb(238, 255, 0);
+      left: 50%;
+      top: 50%;
+      transform: translate(-120%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 0.5rem;
+      /* text-align: center; */
+      font-size: 16px;
+      margin-left: 40px;
+      margin-top: 10px;
+    }
+    
+    .login-button10{
+      height: 40px;
+      width: 100px;
+      font-size: medium;
+      font-weight:lighter;
+      margin-bottom: 10px;
+      /* margin-left: 5px; */
+      margin-top: 20px;
+      background-color: yellow;
+      color: black;
+      border: none;
+    }
+    
+    .login-button10:hover{
+     background-color: #e0dddd;
+    }
+    
+    .a10{
+     margin-top: 10px;
+    }
+    
+    .b{
+     margin-top: 5px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #000000;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    
+    a:hover {
+      color: #0400ff;
+    }
+    
+    .quote10{
+      color: white;
+      font-weight: bolder;
+      font-size: 40px;
+      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    p{
+       font-weight: medium;
+       font-size:15px ;
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       
+    }
+
+
+
+  /* Start Our Testimonials */
+.our{
+
+  /* font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+  font-size: 30px;
+  font-weight: bolder;
+  /* color: #000000; */
+  /* margin-right: 300px; */
+  margin-left: 40px;
+  margin-top: 80px;
+  margin-bottom: 10px;
+
+}
+.span10{
+  width: 500px;
+  height: 20px;
+  color: #f45c5c;
+}
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+figure.snip1390 {
+font-family: 'Roboto', Arial, sans-serif;
+position: relative;
+overflow: hidden;
+margin: 10px;
+min-width: 230px;
+max-width: 315px;
+width: 100%;
+color: #000000;
+text-align: center;
+font-size: 16px;
+background-color: #00fff22f;
+/* background-color: #e88bff; */
+padding: 30px;
+background-image: linear-gradient(-25deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+margin-bottom: 80px;
+margin-top: 60px;
+border: 2px solid black;
+}
+
+
+.new{
+display: flex;
+margin-left: 80px;
+}
+figure.snip1390 *,
+figure.snip1390 *:before,
+figure.snip1390 *:after {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-transition: all 0.35s ease;
+transition: all 0.35s ease;
+}
+figure.snip1390 figcaption {
+width: 100%;
+}
+figure.snip1390 h2,
+figure.snip1390 h4,
+figure.snip1390 blockquote {
+margin: 0;
+}
+figure.snip1390 h2,
+figure.snip1390 h4 {
+font-weight: 300;
+}
+figure.snip1390 h2 {
+font-size: 20px;
+font-weight: bolder;
+color: #030303;
+}
+figure.snip1390 h4 {
+font-size: 15px;
+font-weight: bold;
+color: blue;
+}
+figure.snip1390 blockquote {
+font-size: 1em;
+padding: 45px 20px 40px 50px;
+margin-top: 30px;
+background-color: #ffffff;
+border-radius: 5px;
+box-shadow: inset -1.4px -1.4px 2px rgba(0, 0, 0, 0.3);
+text-align: left;
+position: relative;
+}
+figure.snip1390 blockquote:before {
+font-family: 'FontAwesome';
+content: "\201C";
+position: absolute;
+font-size: 70px;
+opacity: 0.25;
+font-style: normal;
+top: 0px;
+left: 20px;
+}
+figure.snip1390 .profile {
+width: 100px;
+border-radius: 50%;
+display: inline-block;
+box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+margin-bottom: 10px;
+border: solid 5px #A6A57A;
+}
+
+
+
+h2{
+  color: black;
+}
+h3{
+  color: #2f00ff;
+  
+  font-size: 20px;
+}
+
+.main .major p{
+  color: black;
+}
