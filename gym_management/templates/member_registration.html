@@ -14,94 +14,58 @@
     <body>
 <div class="outer">
     <form action="/register/member/" method="POST">
-      <input
-        type="hidden"
-        name="csrfmiddlewaretoken"
-        value="PLkNNfn1U8lUucFOL8aHm9WWzH6o1jWi7jEt2ocMBfvNsz0kHhJAYZ7kP60i1o9r"
-      />
+      {% csrf_token %}
       <div>
-        <label for="id_name">Name:</label>
-        <textarea name="name" cols="40" rows="10" required="" id="id_name"></textarea>
+        <label for="{{ form.name.id_for_label }}">Name:</label>
+         {{ form.name }}
+         {{ from.name.errors }}
       </div>
       <div>
-        <label for="id_trainer">Trainer:</label>
-        <select name="trainer" required="" id="id_trainer">
-          <option value="" selected="">---------</option>
-          <option value="1">
-            Aman, (Fitness Instructor & Fitness Freak).
-          </option>
-          <option value="2">
-            Harry, (Passion for heart-pounding workouts & Cardio Expert).
-          </option>
-          <option value="3">
-            I'leana, (Master Trainer, Personalized guidance, expert advice).
-          </option>
-        </select>
+        <label for="{{ form.trainer.id_for_label }}">Trainer:</label>
+        {{ form.trainer }}
+        {{ form.trainer.errors }}
       </div>
       <div>
-        <label for="id_age">Age:</label>
-        <input type="number" name="age" value="10" required="" id="id_age" />
+        <label for="{{ form.age.id_for_label }}">Age:</label>
+         {{ form.age }}
+         {{ form.age.errors }}
       </div>
       <div>
-        <label for="id_sex">Sex:</label>
-        <select name="sex" id="id_sex">
-          <option value="m" selected="">Male</option>
-          <option value="f">Female</option>
-          <option value="o">Other</option>
-        </select>
+        <label for="{{ form.sex.id_for_label }}">Sex:</label>
+        {{ form.sex }}
+        {{ form.sex.errors }}
       </div>
       <div>
-        <label for="id_weight">Weight:</label>
-        <input
-          type="number"
-          name="weight"
-          value="50"
-          step="0.01"
-          required=""
-          id="id_weight"
-        />
+        <label for="{{ form.weight.id_for_label }}">Weight:</label>
+        {{ form.weight }}
+        {{ form.weight.erros }}
       </div>
       <div>
-        <label for="id_address">Address:</label>
-
-        <textarea
-          name="address"
-          cols="40"
-          rows="10"
-          required=""
-          id="id_address"
-        >
-</textarea
-        >
+        <label for="{{ form.height.id_for_label }}">Height : </label>
+        {{ form.height }}
+        {{ form.height.errors }}
+      </div>
+      <div>
+        <label for="{{ form.address.id_for_label }}">Address:</label>
+        {{ form.address }}
+        {{ form.address.errors }}
       </div>
 
       <div>
-        <label for="id_subscription">Subscription:</label>
-
-        <select name="subscription" id="id_subscription">
-          <option value="M" selected="">Monthly</option>
-
-          <option value="Q">Quarterly</option>
-
-          <option value="A">Annualy</option>
-        </select>
+        <label for="{{ form.subscription.id_for_label }}">Subscription:</label>
+        {{ form.subscription }}
+        {{ for.subscription.errors }}
       </div>
 
       <div>
-        <label for="id_fees">Fees:</label>
-
-        <select name="fees" required="" id="id_fees">
-          <option value="" selected="">---------</option>
-
-          <option value="P">Paid</option>
-
-          <option value="NP">Not paid</option>
-        </select>
+        <label for="{{ form.fees.id_for_label }}">Fees:</label>
+        {{ form.fees }}
+        {{ form.fees.errors }}
       </div>
       <button type="submit" class="btn">Register</button>
     </form>
 </div>
 
-  
+
 </body>
 </html>

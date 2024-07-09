@@ -28,13 +28,13 @@ class Member(models.Model):
     trainer = models.ForeignKey(Trainer, on_delete=models.SET_NULL, default=None, null=True)
     age = models.IntegerField(default=10)
     sex = models.CharField(choices=choice, max_length=1, default="m")
-    height = models.DecimalField(max_digits=3, decimal_places=2, default=0.0)
-    weight = models.DecimalField(max_digits=3, decimal_places=2, default=50)
+    height = models.DecimalField(max_digits=4, decimal_places=2, default=0.0)
+    weight = models.DecimalField(max_digits=4, decimal_places=2, default=50)
     address = models.TextField(default="Jane street, New York")
     subs = [
         ("M", "monthly"),
         ("Q", "Quarterly"),
-        ("A", "Annualy"),
+        ("A", "Annualy"),   
     ]
     subscription = models.CharField(choices=subs, max_length=10, default="M")
-    fees = models.CharField(choices=[("P", "paid"),("NP", "Not_paid")], max_length=10)
+    fees = models.CharField(choices=[("P", "paid"),("NP", "Not_paid")], max_length=10, default="NP")
