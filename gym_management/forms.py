@@ -1,5 +1,5 @@
 from django import forms
-from .models import Member, Trainer
+from .models import Member, Trainer, WeightRecord
 
 choice = [
         ("m", "male"),
@@ -23,3 +23,19 @@ class MemberRegistrationForm(forms.ModelForm):
             'fees': forms.Select(choices=[("P", "paid"), ("NP", "Not_paid")])
         }
 
+
+class Weightregisterform(forms.ModelForm):
+    member = forms.ModelChoiceField(queryset=Member.objects.order_by("name"))
+    class Meta:
+        model = WeightRecord
+        fields = ['member', 'date', 'weight']
+        widgets = {
+            'date': forms.SelectDateWidget(),
+        }
+
+
+class Member_select_form(forms.ModelForm):
+    member = forms.ModelChoiceField(queryset=Member.objects.all().order_by("name"))
+    class Meta:
+        model = Member
+        fields = ["name"]

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Trainer, Member
+from .models import Trainer, Member, WeightRecord
 # Register your models here.
 
 
@@ -34,3 +34,9 @@ class MemberAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Member, MemberAdmin)
+
+class WeightRecordAdmin(admin.ModelAdmin):
+    list_display = [ 'member', 'date', 'weight']
+
+
+admin.site.register(WeightRecord, WeightRecordAdmin)

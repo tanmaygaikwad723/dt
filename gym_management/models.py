@@ -7,11 +7,11 @@ class Trainer(models.Model):
     address = models.TextField(default="jane street, New York")
     city = models.TextField(default="New York")
     gender = models.TextField(default="male")
-    date_of_birth = models.DateField(default=timezone.now())
+    date_of_birth = models.DateTimeField(default=timezone.now)
     email = models.EmailField(default=None)
-    jod = models.DateField(default=timezone.now())
+    jod = models.DateTimeField(default=timezone.now)
     trainspec = models.TextField(default=None)
-    experience = models.DecimalField(decimal_places=2, max_digits=2, default=0.0)
+    experience = models.DecimalField(decimal_places=2, max_digits=4, default=0.0)
     phone = models.CharField(max_length=13, default=00000000000)
 
     def __str__(self):
@@ -38,3 +38,15 @@ class Member(models.Model):
     ]
     subscription = models.CharField(choices=subs, max_length=10, default="M")
     fees = models.CharField(choices=[("P", "paid"),("NP", "Not_paid")], max_length=10, default="NP")
+
+    def __str__(self):
+        return f"{self.name}"
+
+
+class WeightRecord(models.Model):
+    member = models.ForeignKey(Member, on_delete=models.CASCADE, null=False)
+    date = models.DateTimeField(default=timezone.now)
+    weight = models.DecimalField(max_digits=5, decimal_places=2)
+
+    def __str__(self):
+        return f"Name: {self.member.name}, date: {self.date}, weight: {self.weight}"
