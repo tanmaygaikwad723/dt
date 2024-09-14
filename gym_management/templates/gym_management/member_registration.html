@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Member Registration</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'gym_management/reg_member.css' %}" />
+  </head>
+  <body>
+    <h1 class="header">Member Registration Form</h1>
+    <title>Member Registration Form</title>
+    </head>
+    <body>
+<div class="outer">
+    <form action="/register/member/" method="POST">
+      {% csrf_token %}
+      <div>
+        <label for="{{ form.name.id_for_label }}">Name:</label>
+         {{ form.name }}
+         {{ from.name.errors }}
+      </div>
+      <div>
+        <label for="{{ form.trainer.id_for_label }}">Trainer:</label>
+        {{ form.trainer }}
+        {{ form.trainer.errors }}
+      </div>
+      <div>
+        <label for="{{ form.age.id_for_label }}">Age:</label>
+         {{ form.age }}
+         {{ form.age.errors }}
+      </div>
+      <div>
+        <label for="{{ form.sex.id_for_label }}">Sex:</label>
+        {{ form.sex }}
+        {{ form.sex.errors }}
+      </div>
+      <div>
+        <label for="{{ form.weight.id_for_label }}">Weight:</label>
+        {{ form.weight }}
+        {{ form.weight.erros }}
+      </div>
+      <div>
+        <label for="{{ form.height.id_for_label }}">Height : </label>
+        {{ form.height }}
+        {{ form.height.errors }}
+      </div>
+      <div>
+        <label for="{{ form.address.id_for_label }}">Address:</label>
+        {{ form.address }}
+        {{ form.address.errors }}
+      </div>
+
+      <div>
+        <label for="{{ form.subscription.id_for_label }}">Subscription:</label>
+        {{ form.subscription }}
+        {{ for.subscription.errors }}
+      </div>
+
+      <div>
+        <label for="{{ form.fees.id_for_label }}">Fees:</label>
+        {{ form.fees }}
+        {{ form.fees.errors }}
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
+</div>
+
+
+</body>
+</html>

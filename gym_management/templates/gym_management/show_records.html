@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Member's weight records history</title>
+        <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+    </head>
+    <body>
+        <h1>
+            Select your name to view weight record history
+        </h1>
+        <form id="member-select-form">
+            {% csrf_token %}
+            <div>
+                <label for="{{ form.member.id_for_label }}">Your name:</label>
+                {{ form.member }}
+                {{ form.member.errors }}
+            </div>
+            <button type="button" 
+            hx-get="/showrecords/member" 
+            hx-target="#weight-records" 
+            hx-swap="innerHTML"
+            hx-vals='{"member_id": document.getElementById("id_member").value}'>show records</button>
+        </form>
+        <div id="weight-records"></div>
+    </body>
+</html>
