@@ -2,8 +2,8 @@ from django.template import loader
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from .models import Member, WeightRecord
-from ludic.contrib.django import LudicResponse
-from ludic.html import html, head, body, div, h1, p, body, title, b
+# from ludic.contrib.django import LudicResponse
+# from ludic.html import html, head, body, div, h1, p, body, title, b
 
 
 
